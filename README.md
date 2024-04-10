@@ -86,6 +86,7 @@
 -   AWS EC2
 -   Docker
 -   Jenkins
+-   nginx
 
 ### 협업 툴
 
