@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactModal from 'react-modal';
 import Modal from 'react-modal';
 
 interface ModalProps {
@@ -9,7 +10,7 @@ interface ModalProps {
 
 const customStyles: ReactModal.Styles = {
   overlay: {
-    backgroundColor: ' rgba(0, 0, 0, 0.25)',
+    backgroundColor: ' rgba(34, 32, 32, 0.25)',
     width: '100%',
     height: '100vh',
     zIndex: '10',

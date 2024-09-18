@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import GlobalStyle from './styles/globalStyle';
 import './styles/fonts/font.css';
 import { RecoilRoot } from 'recoil';
-import ActionButton from './components/actionButton/ActionButton';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 const App = () => {
