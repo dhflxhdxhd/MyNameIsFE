@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactModal from 'react-modal';
 import Modal from 'react-modal';
 
 interface ModalProps {
@@ -8,7 +7,7 @@ interface ModalProps {
   children: React.ReactNode;
 }
 
-const customStyles: ReactModal.Styles = {
+const customStyles: Modal.Styles = {
   overlay: {
     backgroundColor: ' rgba(34, 32, 32, 0.25)',
     width: '100%',
