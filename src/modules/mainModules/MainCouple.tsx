@@ -11,7 +11,6 @@ interface MainCoupleProps {
   coupleRef: React.RefObject<HTMLDivElement>;
 }
 
-
 const fadeInDown = keyframes`
   0% {
     opacity: 0;
@@ -86,7 +85,6 @@ const StyledWarnContainer = styled.div`
   &:hover {
     transform: scale(1.1); // hover 시 크기 확대
   }
-  
 `;
 
 const StyledWarnText = styled.p`
@@ -119,7 +117,6 @@ const StyledCoupleTitle = styled.p`
   margin-left: 14px;
 `;
 
-
 const StyledHeroDownContainer = styled.div`
   position: absolute;
   left: 50%;
@@ -138,13 +135,10 @@ const StyledHeroDownText = styled.p`
   text-align: center;
 `;
 
-
 const MainCouple = ({ scrollToRef, reviewRef }: MainCoupleProps) => {
-
   const handleScrollToReviewClick = () => {
     scrollToRef(reviewRef);
   };
-
 
   return (
     <StyledMainCoupleContainer ref={reviewRef}>
@@ -167,10 +161,10 @@ const MainCouple = ({ scrollToRef, reviewRef }: MainCoupleProps) => {
         </StyledContentsContainer>
       </StyledTextContainer>
       <StyledSvg src={MainCoupleImg} alt='Main couple' />
-      <StyledHeroDownContainer onClick={handleScrollToReviewClick}>
+      {/* <StyledHeroDownContainer onClick={handleScrollToReviewClick}>
         <StyledHeroDownText>My name is</StyledHeroDownText>
         <Icon src={Down} />
-      </StyledHeroDownContainer>
+      </StyledHeroDownContainer> */}
     </StyledMainCoupleContainer>
   );
 };

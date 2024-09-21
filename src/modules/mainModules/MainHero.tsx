@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
-import heroCouple from '../../assets/img/hero_couple.png';
-import heroSolo from '../../assets/img/hero_solo.png';
+import heroCouple from '../../assets/img/hero_couple.webp';
+import heroSolo from '../../assets/img/hero_solo.webp';
 import Button from '../../components/button/Button';
 import Icon from '../../components/icon/Icon';
 import { Down } from '../../config/IconName';
@@ -168,10 +168,10 @@ const MainHero = ({ isOpenChat, setIsOpenChat, scrollToRef, stepRef }: MainHeroP
             )}
           </StyledHeroTextContainer>
 
-          <StyledHeroDownContainer onClick={handleScrollToStepClick}>
+          {/* <StyledHeroDownContainer onClick={handleScrollToStepClick}>
             <StyledHeroDownText>My name is</StyledHeroDownText>
             <Icon src={Down} />
-          </StyledHeroDownContainer>
+          </StyledHeroDownContainer> */}
         </StyledMainHeroContainer>
       )}
     </>

@@ -8,7 +8,7 @@ import { Down } from '../../config/IconName';
 interface MainStepProps {
   scrollToRef: (ref: React.RefObject<HTMLDivElement>) => void;
   coupleRef: React.RefObject<HTMLDivElement>;
-  stepRef:React.RefObject<HTMLDivElement>;
+  stepRef: React.RefObject<HTMLDivElement>;
 }
 
 const fadeInDown = keyframes`
@@ -110,7 +110,6 @@ const StyledHeroDownText = styled.p`
 `;
 
 const MainStep = ({ scrollToRef, coupleRef }: MainStepProps) => {
-  
   const handleScrollToCoupleClick = () => {
     scrollToRef(coupleRef);
   };
@@ -150,10 +149,10 @@ const MainStep = ({ scrollToRef, coupleRef }: MainStepProps) => {
           <StyledStepContents>서로에게 관심이 있을 경우 투표로 매칭을 결정하고, 매칭된 분들은 1 : 1 시간을 가져 자유롭게 대화할 수 있어요.</StyledStepContents>
         </StyledStep>
       </StyledTextContainer>
-      <StyledHeroDownContainer onClick={handleScrollToCoupleClick}>
+      {/* <StyledHeroDownContainer onClick={handleScrollToCoupleClick}>
         <StyledHeroDownText>My name is</StyledHeroDownText>
         <Icon src={Down} />
-      </StyledHeroDownContainer>
+      </StyledHeroDownContainer> */}
     </StyledMainStepContainer>
   );
 };

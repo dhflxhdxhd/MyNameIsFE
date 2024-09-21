@@ -1,10 +1,26 @@
 import React from 'react';
+import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../assets/img/logo.webp';
 
-const Logo = () => (
-  <div>
-    <iframe src='https://giphy.com/embed/nkiSXYxB9yp6yN3tKt' width='60' height='60' className='giphy-embed' style={{ border: 'none' }} allowFullScreen></iframe>
-  </div>
-);
+const StyledLogoImage = styled.img`
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+`;
+
+const Logo = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/'); // 이동하고자 하는 경로로 변경
+  };
+
+  return (
+    <>
+      <StyledLogoImage src={logo} alt='logo' onClick={handleClick}></StyledLogoImage>
+    </>
+  );
+};
 
 export default Logo;
