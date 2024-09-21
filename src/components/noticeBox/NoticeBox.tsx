@@ -21,7 +21,7 @@ const StyledText = styled.p`
 const NoticeBox = (props: NoticeBoxProps) => {
   return (
     <NoticeBoxContainer>
-      <Icon src={Notice} width='24px' height='24px' />
+      <Icon src={Notice} description='icon' width='24px' height='24px' />
       <StyledText>{props.noticeText}</StyledText>
     </NoticeBoxContainer>
   );

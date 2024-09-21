@@ -74,22 +74,22 @@ const Header = (props: HeaderProps) => {
             {props.isLogin ? (
               <>
                 <StyledPointContainer onClick={props.onCoinClick}>
-                  <Icon src={Coin} width='24px' height='24px' />
+                  <Icon src={Coin} description='coin icon' width='24px' height='24px' />
                   <StyledPoint>{addCommaInNumber(userInfo.coin)}</StyledPoint>
                 </StyledPointContainer>
-                <Icon src={Bell} width='24px' height='24px' />
+                <Icon src={Bell} description='alarm icon' width='24px' height='24px' />
                 <StyledButtonContainer>
                   <MyPageContainer>
-                    <Button onButtonClick={props.onClickMyPage} backgroundColor='#E1A3B3' width='85px' height='33px' borderRadius='15px' children={<p>마이페이지</p>} fontColor='#fff' fontSize='16px' />
+                    <Button onButtonClick={props.onClickMyPage} backgroundcolor='#E1A3B3' width='85px' height='33px' borderradius='15px' children={<p>마이페이지</p>} fontcolor='#fff' fontSize='16px' />
                     {props.isMyPageOpen && <MyPageCard isCoinOpenPage={props.isCoinPageOpen} onCoinClick={props.onCoinClick} />}
                   </MyPageContainer>
-                  <Button onButtonClick={props.onClickLogout} backgroundColor='#fff' width='85px' height='33px' borderRadius='15px' children={<p>로그아웃</p>} fontColor='#E1A3B3' borderColor='#E1A3B3' fontSize='16px' />
+                  <Button onButtonClick={props.onClickLogout} backgroundcolor='#fff' width='85px' height='33px' borderradius='15px' children={<p>로그아웃</p>} fontcolor='#E1A3B3' bordercolor='#E1A3B3' fontSize='16px' />
                 </StyledButtonContainer>
               </>
             ) : (
               <StyledButtonContainer>
-                <Button onButtonClick={props.onClickSignUp} backgroundColor='#E1A3B3' width='85px' height='33px' borderRadius='15px' children={<p>회원가입</p>} fontColor='#fff' fontSize='16px' />
-                <Button onButtonClick={props.onClickLogin} backgroundColor='#fff' width='85px' height='33px' borderRadius='15px' children={<p>로그인</p>} fontColor='#E1A3B3' borderColor='#E1A3B3' fontSize='16px' />
+                <Button onButtonClick={props.onClickSignUp} backgroundcolor='#E1A3B3' width='85px' height='33px' borderradius='15px' children={<p>회원가입</p>} fontcolor='#fff' fontSize='16px' />
+                <Button onButtonClick={props.onClickLogin} backgroundcolor='#fff' width='85px' height='33px' borderradius='15px' children={<p>로그인</p>} fontcolor='#E1A3B3' bordercolor='#E1A3B3' fontSize='16px' />
               </StyledButtonContainer>
             )}
             {/* 로그인, 회원가입 */}

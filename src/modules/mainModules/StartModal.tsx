@@ -45,13 +45,13 @@ const ModalBox = styled.div<BoxStyleProps>`
 interface TextStyleProps {
   fontSize: string;
   fontFamily?: string;
-  fontColor?: string;
+  fontcolor?: string;
 }
 
 const StyledText = styled.p<TextStyleProps>`
   font-size: ${(props) => props.fontSize};
   font-family: ${(props) => (props.fontFamily ? props.fontFamily : 'Pretendard SemiBold')};
-  color: ${(props) => (props.fontColor ? props.fontColor : 'black')};
+  color: ${(props) => (props.fontcolor ? props.fontcolor : 'black')};
 `;
 
 const StartModal = (props: StartModalProps) => {
@@ -146,7 +146,7 @@ const StartModal = (props: StartModalProps) => {
       {loadingModalOpen ? (
         <>
           <div onClick={handleClose}>
-            <Icon src={Close} width='8px' height='8px' />
+            <Icon src={Close} width='8px' description='close icon' height='8px' />
           </div>
           <ModalBox marginTop='50px'>
             <LoadingSpinner />
@@ -163,12 +163,12 @@ const StartModal = (props: StartModalProps) => {
       ) : (
         <>
           <div onClick={handleClose}>
-            <Icon src={Close} width='8px' height='8px' />
+            <Icon src={Close} description='close icon' width='8px' height='8px' />
           </div>
 
           <ModalBox>
             <StyledText fontSize='24px'>원하는 상대의 조건을 선택해 보세요</StyledText>
-            <StyledText fontSize='14px' fontColor='#999999' fontFamily='Pretendard Regular'>
+            <StyledText fontSize='14px' fontcolor='#999999' fontFamily='Pretendard Regular'>
               선택이 어려우시다면 다양한 옵션을 시도해보세요
             </StyledText>
           </ModalBox>
@@ -189,11 +189,11 @@ const StartModal = (props: StartModalProps) => {
                       toast('인원을 선택해주세요', { theme: 'dark', duration: 1000 });
                     }
               }
-              backgroundColor={'#e1a4b4'}
+              backgroundcolor={'#e1a4b4'}
               width={'400px'}
               height={'60px'}
-              borderRadius={'10px'}
-              fontColor='white'
+              borderradius={'10px'}
+              fontcolor='white'
             >
               매칭 시작하기
             </Button>

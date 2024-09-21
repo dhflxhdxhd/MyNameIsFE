@@ -281,7 +281,7 @@ const CoupleMeeting = () => {
     <CoupleMeetingRoomContainer>
       <NoticeContainer>
         <NoticeBox noticeText={notice} />
-        <Button backgroundColor='#e1a4b4' width='145px' height='43px' borderRadius='30px' fontColor='white' onButtonClick={handleGameBtn}>
+        <Button backgroundcolor='#e1a4b4' width='145px' height='43px' borderradius='30px' fontcolor='white' onButtonClick={handleGameBtn}>
           커플 게임
         </Button>
       </NoticeContainer>
@@ -292,9 +292,9 @@ const CoupleMeeting = () => {
               {publisher !== undefined && (
                 <PublisherStreamContainer>
                   <VideoCard streamManager={publisher} userType={0} width={'65vw'} height={'75vh'}>
-                    {/* <HashtagButton backgroundColor='#E1A4B4'>{JSON.parse(JSON.parse(subscriber.stream.connection.data).clientData).myGender}</HashtagButton> */}
+                    {/* <HashtagButton backgroundcolor='#E1A4B4'>{JSON.parse(JSON.parse(subscriber.stream.connection.data).clientData).myGender}</HashtagButton> */}
                     <UserInfoContainer>
-                      <HashtagButton backgroundColor={myInfo?.gender ? '#A5A4E1' : '#E1A4B4'} padding='10px 30px' fontSize='18px'>
+                      <HashtagButton backgroundcolor={myInfo?.gender ? '#A5A4E1' : '#E1A4B4'} padding='10px 30px' fontSize='18px'>
                         {initMyData.myUserName}
                       </HashtagButton>
                     </UserInfoContainer>
@@ -307,7 +307,7 @@ const CoupleMeeting = () => {
                 <StreamContainer key={i}>
                   <VideoCard streamManager={sub} userType={1} width='360px' height='270px'>
                     <UserInfoContainer>
-                      <HashtagButton backgroundColor='#E1A4B4' padding='10px 30px' fontSize='18px'>
+                      <HashtagButton backgroundcolor='#E1A4B4' padding='10px 30px' fontSize='18px'>
                         {JSON.parse(JSON.parse(sub.stream.connection.data).clientData).myUserName}
                       </HashtagButton>
                     </UserInfoContainer>

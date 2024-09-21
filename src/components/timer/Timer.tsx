@@ -93,7 +93,7 @@ const Timer = (props: TimerProps) => {
 
   return (
     <StyledTimer>
-      <Icon src={TimerIcon} width='20px' height='20px' />
+      <Icon src={TimerIcon} description='icon' width='20px' height='20px' />
       {padNumber(min, 2)}:{padNumber(sec, 2)}
     </StyledTimer>
   );

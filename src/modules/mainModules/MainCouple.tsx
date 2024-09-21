@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import MainCoupleImg from '../../assets/img/main_couple.svg';
+// import MainCoupleImg from '../../assets/img/main_couple.svg';
+import MainCoupleImg from '../../assets/img/main_couple.webp';
 import { BlinkCircle, Warn } from '../../config/IconName';
 import Icon from '../../components/icon/Icon';
 import { Down } from '../../config/IconName';
@@ -148,13 +149,13 @@ const MainCouple = ({ scrollToRef, reviewRef }: MainCoupleProps) => {
 
         <StyledContentsContainer>
           <StyledCoupleTitleContainer>
-            <Icon src={BlinkCircle} />
+            <Icon src={BlinkCircle} description='icon' />
             <StyledCoupleTitle>매칭 후 시작되는 둘만의 이야기</StyledCoupleTitle>
           </StyledCoupleTitleContainer>
 
           <StyledContents>매칭된 커플은 1:1 채팅 또는 화상 서비스를 통해 서로를 더 알아가는 소중한 시간을 보낼 수 있습니다.</StyledContents>
           <StyledWarnContainer>
-            <Icon src={Warn} />
+            <Icon src={Warn} description='warn icon' />
             <StyledWarnText>주의</StyledWarnText>
           </StyledWarnContainer>
           <StyledContents>매칭이 되어 있는 동안 다른 소개팅 진행이 불가능합니다.</StyledContents>

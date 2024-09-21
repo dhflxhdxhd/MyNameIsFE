@@ -22,7 +22,7 @@ const progressBarAnimation = keyframes`
 `;
 
 interface StyledReviewContainerProps {
-  slideWidth: number;
+  slidewidth: number;
 }
 
 const StyledMainStartContainer = styled.div`
@@ -61,9 +61,8 @@ const StyledReviewContainer = styled.div<StyledReviewContainerProps>`
   margin-top: 60px;
   overflow: hidden;
   margin-bottom: 60px;
-  width: ${(props) => props.slideWidth};
+  width: ${(props) => `${props.slidewidth}px`};
 `;
-
 
 const ProgressBar = styled.div`
   position: absolute;
@@ -73,7 +72,6 @@ const ProgressBar = styled.div`
   background-color: white;
   animation: ${progressBarAnimation} 10s linear infinite;
 `;
-
 
 const reviews = [
   {
@@ -94,7 +92,6 @@ const reviews = [
 ];
 
 const MainReview = () => {
-
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 
   useEffect(() => {
@@ -105,13 +102,12 @@ const MainReview = () => {
     return () => clearInterval(intervalId); // 컴포넌트가 언마운트될 때 clearInterval
   }, []);
 
-
-
   return (
     <StyledMainStartContainer>
       <StyledReviewSubTitle>REVIEW</StyledReviewSubTitle>
       <StyledReviewTitle>사용자들은 이렇게 말해요</StyledReviewTitle>
-      <StyledReviewContainer slideWidth={reviews.length * 100} key={currentReviewIndex} >
+      {/* <StyledReviewContainer slideWidth={reviews.length * 100} key={currentReviewIndex}> */}
+      <StyledReviewContainer slidewidth={reviews.length * 300}>
         <ReviewCard color={currentReviewIndex % 2 === 0 ? 'pink' : 'dpink'} review={reviews[currentReviewIndex]} />
         <ProgressBar />
       </StyledReviewContainer>

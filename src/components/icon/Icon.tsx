@@ -6,7 +6,8 @@ interface IconProps {
   height?: string | '100%';
   src: string;
   children?: React.ReactNode;
-  marginRight?:string;
+  marginRight?: string;
+  description?: string;
 }
 
 const StyledIconContainer = styled.div<IconProps>`
@@ -32,7 +33,7 @@ const StyledChildrenContainer = styled.div`
 const Icon = (props: IconProps) => {
   return (
     <StyledIconContainer {...props}>
-      <StyledIcon src={props.src} />
+      <StyledIcon src={props.src} alt={props.description} />
       {props.children && <StyledChildrenContainer>{props.children}</StyledChildrenContainer>}
     </StyledIconContainer>
   );

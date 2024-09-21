@@ -40,7 +40,7 @@ const Chip = (props: ChipProps) => {
     <StyledChipContainer>
       <StyledText>{props.keyword}</StyledText>
       <div onClick={() => onDelete(props.id)}>
-        <Icon src={DelBtn} width='15px' />
+        <Icon src={DelBtn} description='delete Button' width='15px' />
       </div>
     </StyledChipContainer>
   );

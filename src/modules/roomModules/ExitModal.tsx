@@ -23,12 +23,12 @@ const ExitModal = (props: ExitModalProps) => {
               props.handleLeave();
               navigate('/');
             }}
-            backgroundColor='white'
+            backgroundcolor='white'
             width='168px'
             height='48px'
-            borderRadius='10px'
-            fontColor='black'
-            borderColor='#e1a4b4'
+            borderradius='10px'
+            fontcolor='black'
+            bordercolor='#e1a4b4'
             fontSize='14px'
           >
             그만하기
@@ -37,11 +37,11 @@ const ExitModal = (props: ExitModalProps) => {
             onButtonClick={() => {
               props.setExitModalOpen(!props.exitModalOpen);
             }}
-            backgroundColor='#e1a4b4'
+            backgroundcolor='#e1a4b4'
             width='168px'
             height='48px'
-            borderRadius='10px'
-            fontColor='white'
+            borderradius='10px'
+            fontcolor='white'
             fontSize='14px'
           >
             계속 진행하기
@@ -68,12 +68,12 @@ const ExitCoupleModal = (props: ExitModalProps) => {
               props.handleLeave();
               navigate('/');
             }}
-            backgroundColor='white'
+            backgroundcolor='white'
             width='168px'
             height='48px'
-            borderRadius='10px'
-            fontColor='black'
-            borderColor='#e1a4b4'
+            borderradius='10px'
+            fontcolor='black'
+            bordercolor='#e1a4b4'
             fontSize='14px'
           >
             그만하기
@@ -82,11 +82,11 @@ const ExitCoupleModal = (props: ExitModalProps) => {
             onButtonClick={() => {
               props.setExitModalOpen(!props.exitModalOpen);
             }}
-            backgroundColor='#e1a4b4'
+            backgroundcolor='#e1a4b4'
             width='168px'
             height='48px'
-            borderRadius='10px'
-            fontColor='white'
+            borderradius='10px'
+            fontcolor='white'
             fontSize='14px'
           >
             계속 진행하기

@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
 import styled, { keyframes } from 'styled-components';
 import heroCouple from '../../assets/img/hero_couple.webp';
 import heroSolo from '../../assets/img/hero_solo.webp';
@@ -105,8 +106,21 @@ const MainHero = ({ isOpenChat, setIsOpenChat, scrollToRef, stepRef }: MainHeroP
   // const [isOpenChat, setIsOpenChat] = useState<boolean>(false);
   const navigate = useNavigate();
   // const [isLogin, setIsLogin] = useRecoilState(IsLoginAtom);
-
   const [startModalOpen, setStartModalOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const preloadImages = (srcArray: string[]) => {
+      srcArray.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+      });
+    };
+
+    if (userInfo) {
+      const imageToPreload = userInfo.coupleId ? heroCouple : heroSolo;
+      preloadImages([imageToPreload]);
+    }
+  }, [userInfo]);
 
   const handleVideoBtn = () => {
     console.log('화상 버튼 클릭');
@@ -139,7 +153,7 @@ const MainHero = ({ isOpenChat, setIsOpenChat, scrollToRef, stepRef }: MainHeroP
       {userInfo && (
         <StyledMainHeroContainer ref={stepRef}>
           {!userInfo.coupleId && <StyledHeroImage src={heroSolo} alt='hero Solo' />}
-          {userInfo.coupleId && <StyledHeroImage src={heroCouple} alt='hero Solo' />}
+          {userInfo.coupleId && <StyledHeroImage src={heroCouple} alt='hero Couple' />}
 
           <StyledHeroTextContainer>
             <StyledHeroTitle>저의 이름은</StyledHeroTitle>
@@ -148,17 +162,17 @@ const MainHero = ({ isOpenChat, setIsOpenChat, scrollToRef, stepRef }: MainHeroP
 
             {userInfo.coupleId && (
               <StyledHeroBtnContainer>
-                <Button backgroundColor='#E1A4B4' width='100px' height='40px' borderRadius='15px' fontColor='white' onButtonClick={handleChatBtn}>
+                <Button backgroundcolor='#E1A4B4' width='100px' height='40px' borderradius='15px' fontcolor='white' onButtonClick={handleChatBtn}>
                   채팅하기
                 </Button>
-                <Button backgroundColor='#fff' width='100px' height='40px' borderRadius='15px' fontColor='#E1A4B4' onButtonClick={handleVideoBtn}>
+                <Button backgroundcolor='#fff' width='100px' height='40px' borderradius='15px' fontcolor='#E1A4B4' onButtonClick={handleVideoBtn}>
                   화상채팅
                 </Button>
               </StyledHeroBtnContainer>
             )}
             {!userInfo.coupleId && (
               <>
-                <Button onButtonClick={handleStartBtn} backgroundColor='#E1A4B4' width='100px' height='40px' borderRadius='15px' fontColor='white'>
+                <Button onButtonClick={handleStartBtn} backgroundcolor='#E1A4B4' width='100px' height='40px' borderradius='15px' fontcolor='white'>
                   시작하기
                 </Button>
                 <MyModal isOpen={startModalOpen} setIsOpen={setStartModalOpen}>

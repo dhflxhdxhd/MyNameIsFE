@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import MainStepImg from '../../assets/img/main_step.svg';
+// import MainStepImg from '../../assets/img/main_step.svg';
+import MainStepImg from '../../assets/img/main_step.webp';
 import { BlinkRed } from '../../config/IconName';
 import Icon from '../../components/icon/Icon';
 import { Down } from '../../config/IconName';
@@ -91,16 +92,16 @@ const StyledStepContents = styled.p`
   line-height: 27px;
 `;
 
-const StyledHeroDownContainer = styled.div`
-  position: absolute;
-  left: 50%;
-  bottom: 12px;
-  transform: translateX(-50%);
-  &:hover {
-    animation: ${fadeInDown} 1s ease forwards; // 애니메이션 적용 (1초 동안 ease)
-  }
-  cursor: pointer;
-`;
+// const StyledHeroDownContainer = styled.div`
+//   position: absolute;
+//   left: 50%;
+//   bottom: 12px;
+//   transform: translateX(-50%);
+//   &:hover {
+//     animation: ${fadeInDown} 1s ease forwards; // 애니메이션 적용 (1초 동안 ease)
+//   }
+//   cursor: pointer;
+// `;
 
 const StyledHeroDownText = styled.p`
   font-family: 'Pretendard Bold';
@@ -122,28 +123,28 @@ const MainStep = ({ scrollToRef, coupleRef }: MainStepProps) => {
         <StyledTitle>이런 단계를 거쳐요</StyledTitle>
         <StyledStep>
           <StyledStepTextContainer>
-            <Icon src={BlinkRed} />
+            <Icon src={BlinkRed} description='blinkIcon' />
             <StyledStepText>블라인드 소개 단계</StyledStepText>
           </StyledStepTextContainer>
           <StyledStepContents>나이, 성별, 목소리, 지역만을 공개하여 자신을 나타내보세요.</StyledStepContents>
         </StyledStep>
         <StyledStep>
           <StyledStepTextContainer>
-            <Icon src={BlinkRed} />
+            <Icon src={BlinkRed} description='blinkIcon' />
             <StyledStepText>흥미와 특기 공개 단계</StyledStepText>
           </StyledStepTextContainer>
           <StyledStepContents>흥미, 특기 그리고 직업을 단계적으로 공유해보세요.</StyledStepContents>
         </StyledStep>
         <StyledStep>
           <StyledStepTextContainer>
-            <Icon src={BlinkRed} />
+            <Icon src={BlinkRed} description='blinkIcon' />
             <StyledStepText>얼굴 공개 및 취향 탐색 단계</StyledStepText>
           </StyledStepTextContainer>
           <StyledStepContents>상대방의 얼굴을 확인한 후, 추가 질문을 통해 서로의 취향과 성격을 알아가는 시간을 가져보세요.</StyledStepContents>
         </StyledStep>
         <StyledStep>
           <StyledStepTextContainer>
-            <Icon src={BlinkRed} />
+            <Icon src={BlinkRed} description='blinkIcon' />
             <StyledStepText>투표 및 매칭 단계</StyledStepText>
           </StyledStepTextContainer>
           <StyledStepContents>서로에게 관심이 있을 경우 투표로 매칭을 결정하고, 매칭된 분들은 1 : 1 시간을 가져 자유롭게 대화할 수 있어요.</StyledStepContents>

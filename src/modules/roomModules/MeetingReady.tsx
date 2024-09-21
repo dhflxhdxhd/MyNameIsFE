@@ -79,7 +79,7 @@ const MeetingReady = (props: MeetingReadyProps) => {
       <VideoContainer>
         <VideoCard width={'70vw'} height={'70vh'} streamManager={props.streamManager} userType={props.userType}>
           <HashtagContainer>
-            <HashtagButton backgroundColor={userInfo.myGender ? '#A5A4E1' : '#e1a4b4'}>{userInfo.myUserName}</HashtagButton>
+            <HashtagButton backgroundcolor={userInfo.myGender ? '#A5A4E1' : '#e1a4b4'}>{userInfo.myUserName}</HashtagButton>
           </HashtagContainer>
         </VideoCard>
       </VideoContainer>

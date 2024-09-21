@@ -12,7 +12,7 @@ const VoteCountHeart = (props: VoteCountHeartProps) => {
   const iconSrc = props.color === 'pink' ? Heart_Pink : Heart_Purple;
 
   return (
-    <Icon src={iconSrc} width='40px'>
+    <Icon src={iconSrc} description='icon' width='40px'>
       <span style={{ fontFamily: 'Pretendard Regular' }}>{props.count}</span>
     </Icon>
   );

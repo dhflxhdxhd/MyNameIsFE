@@ -151,7 +151,7 @@ function Login() {
           <SimpleInput placeholder='아이디' value={loginData.userId} onInputChange={handleUserIdChange} />
           <PasswordInput placeholder='비밀번호' value={loginData.password} onInputChange={handlePasswordChange} onEnterKeyUp={onLogin} />
           <StyledLoginText onClick={goToEmailAuth}>비밀번호를 잊어버리셨나요?</StyledLoginText>
-          <Button width='300px' height='50px' borderRadius='10px' backgroundColor='#E1A4B4' fontColor='#FFF' onButtonClick={onLogin}>
+          <Button width='300px' height='50px' borderradius='10px' backgroundcolor='#E1A4B4' fontcolor='#FFF' onButtonClick={onLogin}>
             로그인
           </Button>
         </StyledLoginInputContainer>

@@ -129,7 +129,7 @@ const MeetingRoom = (props: MeetingRoomProps) => {
           <InfoContainer>
             <HashtagContainer justifyContent='space-between'>
               <div style={{ display: 'flex', gap: '4px' }}>
-                <HashtagButton backgroundColor={myInfo.myGender ? '#A5A4E1' : '#E1A4B4'}>{myInfo.myUserName}</HashtagButton>
+                <HashtagButton backgroundcolor={myInfo.myGender ? '#A5A4E1' : '#E1A4B4'}>{myInfo.myUserName}</HashtagButton>
                 {props.state.includes('step123') && <VoteCountHeart color={myInfo.myGender ? 'purple' : 'pink'} count={props.receivedCount} />}
               </div>
             </HashtagContainer>
@@ -182,13 +182,13 @@ const MeetingRoom = (props: MeetingRoomProps) => {
             <InfoContainer>
               <HashtagContainer justifyContent='space-between'>
                 <div style={{ display: 'flex', gap: '4px' }}>
-                  <HashtagButton backgroundColor={JSON.parse(JSON.parse(sub.stream.connection.data).clientData).myGender ? '#A5A4E1' : 'E1A4B4'}>
+                  <HashtagButton backgroundcolor={JSON.parse(JSON.parse(sub.stream.connection.data).clientData).myGender ? '#A5A4E1' : 'E1A4B4'}>
                     {JSON.parse(JSON.parse(sub.stream.connection.data).clientData).myUserName}
                   </HashtagButton>
                 </div>
                 <ClickBox onClick={() => handleReport(JSON.parse(JSON.parse(sub.stream.connection.data).clientData).myUserId)}>
                   {/* <HashtagButton>신고</HashtagButton> */}
-                  <Icon src={Report} width='24px' height='24px' />
+                  <Icon src={Report} description='report icon' width='24px' height='24px' />
                 </ClickBox>
               </HashtagContainer>
               <HashtagWrapper>

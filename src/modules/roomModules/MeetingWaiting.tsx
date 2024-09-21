@@ -39,7 +39,7 @@ const MeetingWaiting = (props: LoadingProps) => {
   return (
     <LoadingContainer>
       <LoadingHeader>
-        <Icon src={Star} width='16px' height='16px' />
+        <Icon src={Star} description='icon' width='16px' height='16px' />
         <StyledText fontSize='28px' margin='20px'>
           저의 이름은
         </StyledText>

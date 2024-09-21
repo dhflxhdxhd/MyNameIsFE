@@ -37,7 +37,7 @@ const MainStart = () => {
         <StyledMainStartText>함께하는 모든 단계가 의미 있는 '저의 이름은'을 경험해보세요.</StyledMainStartText>
         <StyledMainStartText>특별한 순간이 여기서 시작됩니다!</StyledMainStartText>
       </StyledMainStartTextContainer>
-      <Button backgroundColor='#e1a4b4' width='120px' height='48px' borderRadius='30px' fontColor='white'>
+      <Button backgroundcolor='#e1a4b4' width='120px' height='48px' borderradius='30px' fontcolor='white'>
         시작하기
       </Button>
     </StyledMainStartContainer>

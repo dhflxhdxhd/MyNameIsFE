@@ -85,11 +85,11 @@ const VoteModal = (props: VoteModalProps) => {
         </div>
         {!isClick ? (
           <Button
-            backgroundColor='#e1a4b4'
+            backgroundcolor='#e1a4b4'
             width='168px'
             height='48px'
-            borderRadius='10px'
-            fontColor='white'
+            borderradius='10px'
+            fontcolor='white'
             onButtonClick={() => {
               setIsClick(true);
               props.setIsSelected(true);
@@ -98,7 +98,7 @@ const VoteModal = (props: VoteModalProps) => {
             선택하기
           </Button>
         ) : (
-          <Button backgroundColor='#e1a4b4' width='168px' height='48px' borderRadius='10px' fontColor='white'>
+          <Button backgroundcolor='#e1a4b4' width='168px' height='48px' borderradius='10px' fontcolor='white'>
             대기...
           </Button>
         )}

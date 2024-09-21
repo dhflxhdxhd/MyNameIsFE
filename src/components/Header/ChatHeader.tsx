@@ -56,7 +56,7 @@ const ChatHeader = ({ setIsClickedOutBtn, isClickedOutBtn }: ChatHeaderProps) =>
   return (
     <StyledHeaderContainer>
       <StyledHeaderLeft>
-        <Icon src={Blink} />
+        <Icon src={Blink} description='blink Icon' />
         <StyledReceiverContainer>
           <StyledReceiver>집 가고 싶어요</StyledReceiver>
         </StyledReceiverContainer>
@@ -64,10 +64,10 @@ const ChatHeader = ({ setIsClickedOutBtn, isClickedOutBtn }: ChatHeaderProps) =>
 
       <StyledHeaderRight>
         <StyledIconContainer onClick={handleClickVideoBtn}>
-          <Icon src={Video} width='20px' />
+          <Icon src={Video} description='video icon' width='20px' />
         </StyledIconContainer>
         <StyledIconContainer onClick={handleClickOutBtn}>
-          <Icon src={Out} width='20px' />
+          <Icon src={Out} description='out icon' width='20px' />
         </StyledIconContainer>
       </StyledHeaderRight>
     </StyledHeaderContainer>

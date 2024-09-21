@@ -51,10 +51,10 @@ const ReportModal = (props: ReportModalProps) => {
   return (
     <ModalContainer>
       <div onClick={handleClose} style={{ marginBottom: '20px', display: 'flex', justifyContent: 'flex-end' }}>
-        <Icon src={Close} width='8px' height='8px' />
+        <Icon src={Close} description='close icon' width='8px' height='8px' />
       </div>
       <ModalTitle>
-        <Icon src={ReportRed} width='26px' height='26px' />
+        <Icon src={ReportRed} description='report icon' width='26px' height='26px' />
         <StyledText fontSize='24px'>사용자 신고하기</StyledText>
       </ModalTitle>
       <ModalSubTitle>
@@ -70,7 +70,7 @@ const ReportModal = (props: ReportModalProps) => {
         ))}
       </CheckBoxContainer>
       <ButtonContainer>
-        <Button onButtonClick={handleReport} backgroundColor={'#e1a4b4'} width={'176px'} height={'50px'} borderRadius={'10px'} fontColor='white'>
+        <Button onButtonClick={handleReport} backgroundcolor={'#e1a4b4'} width={'176px'} height={'50px'} borderradius={'10px'} fontcolor='white'>
           신고하기
         </Button>
       </ButtonContainer>

@@ -21,8 +21,8 @@ interface SuccessModalProps {
 interface BoxStyleProps {
   padding?: string;
   marginTop?: string;
-  backgroundColor?: string;
-  borderRadius?: string;
+  backgroundcolor?: string;
+  borderradius?: string;
 }
 
 const StyledBox = styled.div<BoxStyleProps>`
@@ -33,8 +33,8 @@ const StyledBox = styled.div<BoxStyleProps>`
   align-items: center;
   margin-top: ${(props) => props.marginTop};
   padding: ${(props) => (props.padding ? props.padding : '10px')};
-  background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : 'transparent')};
-  border-radius: ${(props) => (props.borderRadius ? props.borderRadius : '0px')};
+  background-color: ${(props) => (props.backgroundcolor ? props.backgroundcolor : 'transparent')};
+  border-radius: ${(props) => (props.borderradius ? props.borderradius : '0px')};
 `;
 
 interface TextStyleProps {
@@ -95,7 +95,7 @@ const SuccessModal = (props: SuccessModalProps) => {
         <StyledText>당신과 [영호]님 사이에 서로에게 호감이 느껴졌어요.</StyledText>
         <StyledText>커플이 되면 다음과 같은 기능을 사용할 수 있습니다.</StyledText>
       </StyledBox>
-      <StyledBox marginTop='20px' padding='20px 30px' backgroundColor='#F4F4F4' borderRadius='10px'>
+      <StyledBox marginTop='20px' padding='20px 30px' backgroundcolor='#F4F4F4' borderradius='10px'>
         <StyledText>1:1 채팅, 1:1 화상 채팅 이용 가능</StyledText>
         <StyledText>다대다 소개팅 서비스 이용 불가</StyledText>
       </StyledBox>
@@ -104,10 +104,10 @@ const SuccessModal = (props: SuccessModalProps) => {
         <StyledText underline={true}>수락시 1:1 화상채팅으로 이동합니다.</StyledText>
       </StyledBox>
       <ButtonContainer>
-        <Button onButtonClick={handlRefuse} backgroundColor={'white'} width={'160px'} height={'60px'} borderRadius={'8px'} borderColor='#e1a4b4'>
+        <Button onButtonClick={handlRefuse} backgroundcolor={'white'} width={'160px'} height={'60px'} borderradius={'8px'} bordercolor='#e1a4b4'>
           거절하기
         </Button>
-        <Button onButtonClick={handleApprove} backgroundColor={'#E1A4B4'} width={'160px'} height={'60px'} borderRadius={'8px'} fontColor='white'>
+        <Button onButtonClick={handleApprove} backgroundcolor={'#E1A4B4'} width={'160px'} height={'60px'} borderradius={'8px'} fontcolor='white'>
           수락하기
         </Button>
       </ButtonContainer>

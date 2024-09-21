@@ -18,12 +18,12 @@ const StyleVideoButtonContainer = styled.div<ButtonItemProps>`
 `;
 
 interface ButtonItemProps {
-  backgroundColor?: string;
+  backgroundcolor?: string;
   gap?: string;
 }
 
 const StylevideoButtonItem = styled.div<ButtonItemProps>`
-  background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : '#2E3038')};
+  background-color: ${(props) => (props.backgroundcolor ? props.backgroundcolor : '#2E3038')};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,20 +46,20 @@ const VideoButton = (props: VideoButtonProps) => {
   return (
     <StyleVideoButtonContainer>
       <StylevideoButtonItem>
-        <div onClick={handleMicToggle}>{isMicRunning ? <Icon src={MicOn} width='20px' height='20px' /> : <Icon src={MicOff} width='20px' height='20px' />}</div>
+        <div onClick={handleMicToggle}>{isMicRunning ? <Icon src={MicOn} description='icon' width='20px' height='20px' /> : <Icon src={MicOff} description='icon' width='20px' height='20px' />}</div>
       </StylevideoButtonItem>
 
       <StylevideoButtonItem>
-        <div onClick={handleVideoToggle}>{isVideoRunning ? <Icon src={VideoOn} width='20px' height='20px' /> : <Icon src={VideoOff} width='20px' height='20px' />}</div>
+        <div onClick={handleVideoToggle}>{isVideoRunning ? <Icon src={VideoOn} description='icon' width='20px' height='20px' /> : <Icon src={VideoOff} description='icon' width='20px' height='20px' />}</div>
       </StylevideoButtonItem>
 
       <StylevideoButtonItem
-        backgroundColor='#FF4155'
+        backgroundcolor='#FF4155'
         onClick={() => {
           props.setExitModalOpen(true);
         }}
       >
-        <Icon src={RoomOut} width='20px' height='20px' />
+        <Icon src={RoomOut} description='icon' width='20px' height='20px' />
       </StylevideoButtonItem>
     </StyleVideoButtonContainer>
   );

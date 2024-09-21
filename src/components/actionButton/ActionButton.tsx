@@ -106,9 +106,9 @@ const ActionButton = (props: ActionButtonProps) => {
       {props.faqOpen && (
         <FaqContainer>
           <FaqHeader>
-            <Icon src={Star} width='20px' height='20px' />
+            <Icon src={Star} description='StarIcon' width='20px' height='20px' />
             <StyledText fontSize='20px'>이용가이드</StyledText>
-            <Icon src={Star} width='20px' height='20px' />
+            <Icon src={Star} description='StarIcon' width='20px' height='20px' />
           </FaqHeader>
           <FaqCard>
             <StyledText fontSize='12px' margin='5px'>

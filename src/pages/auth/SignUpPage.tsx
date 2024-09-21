@@ -362,7 +362,7 @@ function SignUp() {
             <StyleLabel htmlFor='phoneAuth'>휴대폰 인증</StyleLabel>
             <div style={{ display: 'flex', gap: '10px' }}>
               <SimpleInput placeholder='전화번호를 입력하세요' id='phoneAuth' value={registrationData.phone} onInputChange={handlePhoneChange} width='220px' />
-              <Button width='70px' height='50px' borderRadius='10px' backgroundColor='#E1A4B4' fontColor='#FFF' fontSize='12px' onButtonClick={handleBeforePhoneAuth}>
+              <Button width='70px' height='50px' borderradius='10px' backgroundcolor='#E1A4B4' fontcolor='#FFF' fontSize='12px' onButtonClick={handleBeforePhoneAuth}>
                 다시 요청
               </Button>
             </div>
@@ -389,7 +389,7 @@ function SignUp() {
             <StyleLabel htmlFor='religion'>종교</StyleLabel>
             <CustomDropdown options={['종교를 선택하세요', '무교', '기독교', '천주교', '불교']} width='300px' onSelected={(value) => handleReligionChange(value, 'religion')} />
           </div>
-          <Button width='300px' height='50px' borderRadius='10px' backgroundColor='#E1A4B4' fontColor='#FFF' onButtonClick={handleSignUp}>
+          <Button width='300px' height='50px' borderradius='10px' backgroundcolor='#E1A4B4' fontcolor='#FFF' onButtonClick={handleSignUp}>
             입력 완료
           </Button>
         </StyledSignUpInputContainer>

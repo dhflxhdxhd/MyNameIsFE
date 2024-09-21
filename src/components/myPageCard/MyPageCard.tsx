@@ -16,12 +16,12 @@ interface MyPageCardProps {
 
 interface TextStyleProps {
   fontSize: string;
-  fontColor?: string;
+  fontcolor?: string;
 }
 
 interface BoxStyleProps {
   width?: string;
-  backgroundColor?: string;
+  backgroundcolor?: string;
   padding?: string;
 }
 
@@ -47,7 +47,7 @@ const StyledText = styled.p<TextStyleProps>`
   font-family: 'Pretendard SemiBold';
   margin: 0px 10px;
   font-size: ${(props) => props.fontSize};
-  color: ${(props) => (props.fontColor ? props.fontColor : 'black')};
+  color: ${(props) => (props.fontcolor ? props.fontcolor : 'black')};
 `;
 
 const UserDetailContainer = styled.div<BoxStyleProps>`
@@ -57,7 +57,7 @@ const UserDetailContainer = styled.div<BoxStyleProps>`
   box-shadow: 0px 0px 16px 1.6px rgba(0, 0, 0, 0.1);
   width: ${(props) => (props.width ? props.width : '100%')};
   border-radius: 16px;
-  background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : 'white')};
+  background-color: ${(props) => (props.backgroundcolor ? props.backgroundcolor : 'white')};
 `;
 
 const UserDetailHeader = styled.div`
@@ -133,42 +133,42 @@ const MyPageCard = (props: MyPageCardProps) => {
       {userInfo && userInfo.tag && (
         <>
           <TriangleContainer>
-            <Icon src={Triangle} width='28px' />
+            <Icon src={Triangle} description='triangle icon' width='28px' />
           </TriangleContainer>
           <MyPageContainer>
             <UserInfo>
-              <Icon src={Star} width='20px' />
+              <Icon src={Star} description='start icon' width='20px' />
               <StyledText fontSize='20px'>{userInfo.name}님</StyledText>
-              <Button backgroundColor='white' width='38px' height='18px' borderRadius='8px' borderColor='#e1a4b4' fontColor='#e1a4b4' fontSize='9px'>
+              <Button backgroundcolor='white' width='38px' height='18px' borderradius='8px' bordercolor='#e1a4b4' fontcolor='#e1a4b4' fontSize='9px'>
                 {userInfo.coupleId ? '커플' : '솔로'}
               </Button>
             </UserInfo>
             <UserDetailContainer width='100%'>
               <UserDetailHeader>
                 <UserDetailTitle>회원정보</UserDetailTitle>
-                <Button backgroundColor='white' width='38px' height='18px' borderRadius='8px' borderColor='#e1a4b4' fontColor='#e1a4b4' fontSize='9px'>
+                <Button backgroundcolor='white' width='38px' height='18px' borderradius='8px' bordercolor='#e1a4b4' fontcolor='#e1a4b4' fontSize='9px'>
                   수정
                 </Button>
               </UserDetailHeader>
               <UserDetailBody>
                 <UserDetailBodyItem width='50%'>
-                  <Icon src={Person} width='12px' />
+                  <Icon src={Person} description='icon' width='12px' />
                   <StyledText fontSize='12px'>{userInfo.gender ? '남성' : '여성'}</StyledText>
                 </UserDetailBodyItem>
                 <UserDetailBodyItem width='50%'>
-                  <Icon src={Bag} width='14px' />
+                  <Icon src={Bag} description='icon' width='14px' />
                   <StyledText fontSize='12px'>{userInfo.job}</StyledText>
                 </UserDetailBodyItem>
                 <UserDetailBodyItem width='50%'>
-                  <Icon src={Cake} width='12px' />
+                  <Icon src={Cake} description='icon' width='12px' />
                   <StyledText fontSize='12px'>{formatDate(userInfo.birth)}</StyledText>
                 </UserDetailBodyItem>
                 <UserDetailBodyItem width='50%'>
-                  <Icon src={Location} width='10px' />
+                  <Icon src={Location} description='icon' width='10px' />
                   <StyledText fontSize='12px'>{userInfo.area}</StyledText>
                 </UserDetailBodyItem>
                 <UserDetailBodyItem width='50%'>
-                  <Icon src={Crown} width='12px' />
+                  <Icon src={Crown} description='icon' width='12px' />
                   <StyledText fontSize='12px'>{userInfo.religion}</StyledText>
                 </UserDetailBodyItem>
               </UserDetailBody>
@@ -177,7 +177,7 @@ const MyPageCard = (props: MyPageCardProps) => {
               <UserDetailContainer width='55%'>
                 <UserDetailHeader>
                   <UserDetailTitle>나를 표현하는 단어</UserDetailTitle>
-                  <Button backgroundColor='white' width='38px' height='18px' borderRadius='8px' borderColor='#e1a4b4' fontColor='#e1a4b4' fontSize='9px'>
+                  <Button backgroundcolor='white' width='38px' height='18px' borderradius='8px' bordercolor='#ea4b4' fontcolor='#e1a4b4' fontSize='9px'>
                     수정
                   </Button>
                 </UserDetailHeader>
@@ -200,22 +200,22 @@ const MyPageCard = (props: MyPageCardProps) => {
                   </UserDetailBodyItem> */}
                 </UserDetailBody>
               </UserDetailContainer>
-              <UserDetailContainer width='42%' backgroundColor='#FF9393' padding='10px'>
+              <UserDetailContainer width='42%' backgroundcolor='#FF9393' padding='10px'>
                 <UserDetailHeader>
                   <UserDetailBodyItem width='100%'>
-                    <Icon src={Coin} width='20px' height='20px' />
-                    <StyledText fontSize='12px' fontColor='white'>
+                    <Icon src={Coin} description='icon' width='20px' height='20px' />
+                    <StyledText fontSize='12px' fontcolor='white'>
                       보유 코인
                     </StyledText>
                   </UserDetailBodyItem>
                 </UserDetailHeader>
                 <TextContainer>
-                  <StyledText fontSize='22px' fontColor='white'>
+                  <StyledText fontSize='22px' fontcolor='white'>
                     {addCommaInNumber(userInfo.coin)} 코인
                   </StyledText>
                 </TextContainer>
                 <CoinButtonContainer>
-                  <Button backgroundColor={'white'} width={'64px'} height={'30px'} borderRadius={'12px'} fontColor='#FF9393' fontSize='12px' onButtonClick={props.onCoinClick}>
+                  <Button backgroundcolor={'white'} width={'64px'} height={'30px'} borderradius={'12px'} fontcolor='#FF9393' fontSize='12px' onButtonClick={props.onCoinClick}>
                     충전
                   </Button>
                 </CoinButtonContainer>
@@ -244,7 +244,7 @@ const MyPageCard = (props: MyPageCardProps) => {
             <TextContainer padding='20px 0 0 0'>
               <StyledText
                 fontSize='10px'
-                fontColor='#dddddd'
+                fontcolor='#dddddd'
                 onClick={() => {
                   console.log('탈퇴');
                 }}

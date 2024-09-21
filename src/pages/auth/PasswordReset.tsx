@@ -133,7 +133,7 @@ function PasswordReset() {
             <SimpleInput placeholder='비밀번호 입력' id='PasswordReset' value={newPasswordData.password} onInputChange={handleNewPasswordChange} />
             <PasswordInput placeholder='비밀번호 확인' value={newPasswordConfirm} onInputChange={handleNewPasswordConfirmChange} isReturn={true} originValue={newPassword} />
           </div>
-          <Button width='300px' height='50px' borderRadius='10px' backgroundColor='#E1A4B4' fontColor='#FFF' onButtonClick={onPasswordReset}>
+          <Button width='300px' height='50px' borderradius='10px' backgroundcolor='#E1A4B4' fontcolor='#FFF' onButtonClick={onPasswordReset}>
             비밀번호 변경
           </Button>
         </StyledPasswordResetInputContainer>
