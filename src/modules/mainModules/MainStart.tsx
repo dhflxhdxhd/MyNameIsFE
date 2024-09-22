@@ -31,6 +31,7 @@ const StyledMainStartText = styled.p`
 `;
 
 const MainStart = () => {
+  console.log('MainStart 열림');
   return (
     <StyledMainStartContainer>
       <StyledMainStartTextContainer>

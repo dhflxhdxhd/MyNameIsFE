@@ -92,19 +92,20 @@ const Main = () => {
     y: window.innerHeight - 520 + 20,
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollPosition(window.scrollY);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
-    // console.log('스크롤 값', scrollPosition);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrollPosition]);
+  //   console.log('!!');
 
-  useEffect(() => {});
+  //   window.addEventListener('scroll', handleScroll);
+  //   // console.log('스크롤 값', scrollPosition);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, [scrollPosition]);
+
   return (
     <MainContainer>
       <Header
@@ -116,7 +117,8 @@ const Main = () => {
         isMyPageOpen={myPageOpen}
         onCoinClick={handleCoinPage}
         isCoinPageOpen={coinOpen}
-        showHeader={scrolling}
+        // showHeader={scrolling}
+        showHeader={true}
       />
       <MyModal isOpen={coinOpen} setIsOpen={setCoinOpen} children={<CoinList isOpen={coinOpen} setIsOpen={setCoinOpen} />} />
       <MainSection isOpenChat={isOpenChat} setIsOpenChat={setIsOpenChat} />
