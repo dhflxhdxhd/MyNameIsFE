@@ -13,7 +13,7 @@ pipeline {
                 checkout scm
             }
         }
-        
+
         stage('Print Current Time') {
             steps {
                 script {
@@ -45,13 +45,16 @@ pipeline {
 
         stage("Stop Previous Container"){
             steps{
-                def containerName = "mynameisFE"
-                sh """
-                if [ \$(docker ps -q -f name=${containerName}) ]; then
-                    docker stop ${containerName}
-                    docker rm ${containerName}
-                fi
-                """
+                script {
+                    
+                    def containerName = "mynameisFE"
+                    sh """
+                    if [ \$(docker ps -q -f name=${containerName}) ]; then
+                        docker stop ${containerName}
+                        docker rm ${containerName}
+                    fi
+                    """
+                }
             }
         }
 
