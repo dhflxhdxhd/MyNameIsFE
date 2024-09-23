@@ -104,7 +104,7 @@ const Main = () => {
   //   return () => {
   //     window.removeEventListener('scroll', handleScroll);
   //   };
-  // }, [scrollPosition]);
+  // }, [scrollPosition])
 
   return (
     <MainContainer>
