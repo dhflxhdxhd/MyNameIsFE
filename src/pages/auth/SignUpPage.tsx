@@ -8,8 +8,8 @@ import { CustomRadioButton } from '../../components/button/RadioButton';
 import Chip from '../../components/chip/Chip';
 import { userPhoneAuthentication, userPhoneNumberSubmit, userSignUp } from '../../apis/services/user/user';
 import { useNavigate } from 'react-router-dom';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
 import { isLoginSelector } from '../../recoil/selectors/isLoginSelector';
 import { useRecoilCallback, useRecoilValue } from 'recoil';
 

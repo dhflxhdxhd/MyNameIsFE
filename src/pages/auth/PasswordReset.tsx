@@ -5,9 +5,9 @@ import { useState } from 'react';
 import CustomDropdown from '../../components/dropdown/Dropdown';
 import { userPasswordReset } from '../../apis/services/user/user';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../../components/Footer';
+import Footer from '../../components/footer/Footer';
 import { isLoginSelector } from '../../recoil/selectors/isLoginSelector';
-import Header from '../../components/Header/Header';
+import Header from '../../components/header/Header';
 import { useRecoilValue, useRecoilCallback } from 'recoil';
 
 const StyledPasswordResetContainer = styled.div`

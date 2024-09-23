@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { Star } from '../../config/IconName';
+import { Blink, Star } from '../../config/IconName';
 import Icon from '../icon/Icon';
 
 interface ActionButtonProps {
