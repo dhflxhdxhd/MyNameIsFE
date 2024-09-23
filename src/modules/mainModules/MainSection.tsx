@@ -72,9 +72,7 @@ const MainSection = ({ isOpenChat, setIsOpenChat }: MainSectionProps) => {
 
   return (
     <StyledMainSectionContainer>
-      <Suspense fallback={<div>Loading Hero...</div>}>
-        <MainHero isOpenChat={isOpenChat} setIsOpenChat={setIsOpenChat} scrollToRef={() => scrollToRef(stepRef)} stepRef={stepRef} />
-      </Suspense>
+      <MainHero isOpenChat={isOpenChat} setIsOpenChat={setIsOpenChat} scrollToRef={() => scrollToRef(stepRef)} stepRef={stepRef} />
       <Suspense fallback={<div>Loading Step</div>}>{showComponents.step && <MainStep stepRef={stepRef} scrollToRef={() => scrollToRef(coupleRef)} coupleRef={coupleRef} />}</Suspense>
       <Suspense fallback={<div>Loading Couple</div>}>{showComponents.couple && <MainCouple coupleRef={coupleRef} scrollToRef={() => scrollToRef(reviewRef)} reviewRef={reviewRef} />}</Suspense>
       <Suspense fallback={<div>Loading Review</div>}>{showComponents.review && <MainReview />}</Suspense>
