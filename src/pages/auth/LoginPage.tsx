@@ -9,8 +9,8 @@ import { useRecoilState, useRecoilCallback, useRecoilValue } from 'recoil';
 import { TokenAtom } from '../../recoil/atoms/userAuthAtom';
 import { userInfoState } from '../../recoil/atoms/userState';
 import { isLoginSelector } from '../../recoil/selectors/isLoginSelector';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
 
 const StyledLoginContainer = styled.div`
   width: 537px;

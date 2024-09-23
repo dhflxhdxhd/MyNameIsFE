@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Button from '../../components/button/Button';
 import { useNavigate } from 'react-router-dom';
 import MainSection from '../../modules/mainModules/MainSection';
-import Footer from '../../components/Footer';
+import Footer from '../../components/footer/Footer';
 import Cookies from 'js-cookie';
 import { useRecoilState, useRecoilValue, RecoilValue, useRecoilCallback } from 'recoil';
 import { TokenAtom } from '../../recoil/atoms/userAuthAtom';
@@ -14,7 +14,7 @@ import ActionButton from '../../components/actionButton/ActionButton';
 import CoinList from '../../components/coinListItem/CoinList';
 import MyModal from '../../components/modal/MyModal';
 import ChatPage from '../chatPage/ChatPage';
-import Header from '../../components/Header/Header';
+import Header from '../../components/header/Header';
 
 interface Position {
   x: number;
